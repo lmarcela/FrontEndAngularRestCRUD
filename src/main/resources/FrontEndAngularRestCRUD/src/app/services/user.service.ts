@@ -8,7 +8,7 @@ import { User } from '../model/user'
 
 @Injectable()
 export class UserService {
-  private baseUrl:string='http://localhost:8080/api';
+  private baseUrl:string='http://localhost:8080/api/';
   private headers = new Headers({'Content-Type':'application/json'});
   private options = new RequestOptions({headers:this.headers});
   constructor( private _http:Http) { }
