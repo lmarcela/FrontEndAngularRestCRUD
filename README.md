@@ -14,12 +14,14 @@ git push -u origin master
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
 
-CREAR PROYECTO ANGULAR (RESTCLIENT): ng new FrontEndAngularRestCRUD (Creado dentro de la carpeta \src\main\resources).
-ABRIR PROYECTO EN VSCODE DESDE CONSOLA: code . (Dentro de la carpeta src\main\resources\FrontEndAngularRestCRUD).
-
+CREAR PROYECTO ANGULAR (RESTCLIENT): ng new FrontEndAngularRestCRUD (Creado dentro de la carpeta \src\main\resources\static).
+ABRIR PROYECTO EN VSCODE DESDE CONSOLA: code . (Dentro de la carpeta src\main\resources\\static\FrontEndAngularRestCRUD).
+BOOTSTRAP: npm install bootstrap@next --save (Dentro de la carpeta src\main\resources\\static\FrontEndAngularRestCRUD).
 
 ANGULAR:
 - CREAR CLASE: ng g class user
 - CREAR COMPONENTE SIN ARCHIVOS CSS Y SPEC: ng g c components/listuser --spec false -is
-- CREAR SERVICIO SIN SPEC: ng g s services/user --spec false 
+- CREAR SERVICIO SIN SPEC: ng g s services/user --spec false
+
+
 https://www.youtube.com/watch?v=mnzMx3hh6rg&list=PLF0fAweo0Kogzy5I6LxEaIlJAxVORXZm-&index=2
