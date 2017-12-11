@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service'
 import { User } from "../../model/user"
-import { error } from 'selenium-webdriver';
+import { UserService } from '../../services/user.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-listuser',
@@ -11,7 +11,7 @@ import { error } from 'selenium-webdriver';
 export class ListuserComponent implements OnInit {
   private users : User[];
 
-  constructor(private _userService:UserService) { }
+  constructor(private _userService:UserService, private _router:Router) { }
 
   ngOnInit() {
     this._userService.getUsers().subscribe((users)=>{
@@ -28,5 +28,17 @@ export class ListuserComponent implements OnInit {
     },(error)=>{
       console.log(error);
     })
+  }
+
+  updateUser(user){
+    this._userService.setter(user);
+    this._router.navigate(['/op']);
+  }
+
+  newUser(){
+    let user = new User();
+    this._userService.setter(user);
+    this._router.navigate(['/op']);
+
   }
 }
