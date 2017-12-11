@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HttpModule } from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { ListuserComponent } from './components/listuser/listuser.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { UserService } from './services/user.service'
 
 const appRoutes:Routes=[
   {path:'',component:ListuserComponent},
@@ -20,9 +21,10 @@ const appRoutes:Routes=[
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
