@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-#Original
+# Original
 
 …or create a new repository on the command line
 
@@ -43,3 +43,19 @@ git remote add origin https://github.com/lmarcela/FrontEndAngularRestCRUD.git
 git push -u origin master
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+## Comandos de utilidad
+FrontEndAngularRestCRUD>git remote -v
+origin  https://github.com/lmarcela/BackEndSpringRestCRUD.git (fetch)
+origin  https://github.com/lmarcela/BackEndSpringRestCRUD.git (push)
+
+FrontEndAngularRestCRUD>git remote rm origin
+
+FrontEndAngularRestCRUD>git remote -v
+
+FrontEndAngularRestCRUD>git remote add origin https://github.com/lmarcela/FrontEndAngularRestCRUD.git
+
+FrontEndAngularRestCRUD>git remote -v
+origin  https://github.com/lmarcela/FrontEndAngularRestCRUD.git (fetch)
+origin  https://github.com/lmarcela/FrontEndAngularRestCRUD.git (push)
