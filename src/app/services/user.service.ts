@@ -8,14 +8,14 @@ import { User } from '../model/user'
 
 @Injectable()
 export class UserService {
-  private baseUrl:string='http://localhost:8080/api/';
+  private baseUrl:string='http://localhost:8080/';
   private headers = new Headers({'Content-Type':'application/json'});
   private options = new RequestOptions({headers:this.headers});
   private user = new User();
   constructor( private _http:Http) { }
 
   getUsers(){
-    return this._http.get(this.baseUrl+'users',this.options).map((response:Response)=>response.json()).catch(this.errorHandler);
+    return this._http.get(this.baseUrl+'',this.options).map((response:Response)=>response.json()).catch(this.errorHandler);
   }
 
   getUser(id:Number){
